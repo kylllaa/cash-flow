@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Cash Flow with Grouped Income</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header style="text-align: center; padding: 10px;">
+    <img src="https://uploads.onecompiler.io/43m2bkpqy/43srqu5xv/logo.png" alt="Company Logo" style="width: 450px; height: auto;">
+    <h1><b>Daily Cash Flow Report</b></h1>
+  </header>
+
+  <table id="cashFlowTable">
+    <thead>
+      <tr>
+    <th>Date</th>
+    <th>Cash Received Details</th>
+    <th>Amount Paid (₱)</th>
+    <th>Service Fee (₱)</th>
+    <th>Total Amount (₱)</th>
+    
+  </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <button onclick="addRow()">➕ Add Row</button>
+  <button onclick="calculateSummary()">✅ Calculate Totals</button>
+  
+  <div id="pdfContent" style="display:none;">
+    <h2>Transaction History</h2>
+    <table id="pdfTable"></table>
+    <h3>📅 Daily Income Summary</h3>
+    <table id="pdfSummary"></table>
+  </div>
+
+  <h3>📅 Daily Income Summary</h3>
+  <table id="dailySummaryTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Total Income</th>
+      </tr>
+    </thead>
+    <tbody id="summaryBody"></tbody>
+    <tfoot>
+      <tr class="grand-total">
+        <td>Grand Total Income</td>
+        <td id="grandIncome">₱0.00</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
